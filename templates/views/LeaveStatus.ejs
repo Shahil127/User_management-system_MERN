@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leave Status - Leave Management System</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="card">
+        <div class="card-header bg-info text-white">
+          <h1 class="text-center">Leave Status (Faculty)</h1>
+          <h2 style="text-align: center">
+            Welcome, <%= user_email.first_name %> <%= user_email.last_name %>
+          </h2>
+        </div>
+        <div class="card-body">
+          <a href="/Leave_Application"
+            ><button
+              id="apply-leave-btn"
+              class="btn btn-primary btn-block mt-3"
+            >
+              Apply Leave
+            </button>
+          </a>
+<!-- 
+          <a href="/Leave_Application"
+            ><button
+              id="apply-another-leave-btn"
+              class="btn btn-primary btn-block mt-3"
+              style="display: none"
+            >
+              Apply Another Leave
+            </button>
+          </a> -->
+
+          <a href="/status"
+          ><button
+          id="check-status-btn"
+          class="btn btn-primary btn-block mt-3"
+          >
+            Check Status
+          </button>
+        </a>
+
+          
+
+          <h4 class="mt-4">Leave History</h4>
+          <ul id="leave-history-list">
+            <!-- Leave history items will be populated dynamically using JavaScript -->
+          </ul>
+        </div>
+        <a class="nav-link text-blue" href="/logout">Logout</a>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script3.js"></script>
+    <script src="js/leave_status_script.js"></script>
+  </body>
+</html>
